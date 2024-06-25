@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url(assets/fonts/rische-regular-webfont.woff2) format(woff2);
+  font-family: "riche-regular";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/Poppins-Light.woff2) format(woff2);
+  font-family: "poppins-light";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/Poppins-Regular.woff2) format(woff2);
+  font-family: "poppins-regular";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/Poppins-Medium.woff2) format(woff2);
+  font-family: "poppins-medium";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/Poppins-SemiBold.woff2) format(woff2);
+  font-family: "poppins-semibold";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/Poppins-Bold.woff2) format(woff2);
+  font-family: "poppins-bold";
+  font-display: swap;
+}
+
+:root {
+  --main-background:#fff;
+  --main-text:#000;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #be1e2d
+}
+
+::selection {
+  color: #fff;
+  background: #be1e2d
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: white;
+  background: #020202;
+  font-family: "poppins-regular", sans-serif
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+::-webkit-scrollbar{
+width: 12px;
+background: rgb(27, 27, 27);
+}
+
+::-webkit-scrollbar-thumb{
+background:#444343;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#4b4b4b;
+cursor: pointer;
+}
+
+
