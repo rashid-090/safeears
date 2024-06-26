@@ -40,12 +40,12 @@
 
 ::-moz-selection {
   color: #fff;
-  background: #be1e2d
+  background: #f7b132
 }
 
 ::selection {
   color: #fff;
-  background: #be1e2d
+  background: #f7b132
 }
 
 *{

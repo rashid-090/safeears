@@ -11,9 +11,9 @@ const menuItems=[
 
 const Header = () => {
   return (
-    <nav className='w-10/12 mx-auto flex items-center justify-between bg'>
-        <Link to={'/'}><img className='w-44 h-44 object-cover' src={logo} alt="safeears" /></Link>
-        <ul className='flex items-center gap-5'>
+    <nav className='w-11/12 lg:w-10/12 mx-auto flex items-center justify-between bg'>
+        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 object-cover' src={logo} alt="safeears" /></Link>
+        <ul className='hidden lg:flex items-center gap-5'>
           {menuItems?.map((menu,i)=>(
             <>
               <li className='text-xl uppercase text-white' key={i}><Link to={menu.url}>{menu.title}</Link></li>{i < menuItems.length - 1 && <span className="text-gray-300">•</span>}

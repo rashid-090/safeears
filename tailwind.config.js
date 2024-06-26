@@ -23,7 +23,7 @@ module.exports = {
       medium:['poppins-medium', 'sans-serif'],
       semibold:['poppins-semibold', 'sans-serif'],
       bold:['poppins-bold', 'sans-serif'],
-      futura:['riche-regular', 'sans-serif'],
+      riche:['riche-regular', 'sans-serif'],
      },
    },
   

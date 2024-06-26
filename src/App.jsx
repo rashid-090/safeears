@@ -21,7 +21,7 @@ const Layout = () => {
     <>
       <ScrollToTop />
       <ToastContainer />
-      <div className="min-h-screen flex justify-between flex-col">
+      <div className="2xl:max-w-[1800px] mx-auto min-h-screen flex justify-between flex-col">
         <Header/>
         <Outlet />
         <Footer/>
