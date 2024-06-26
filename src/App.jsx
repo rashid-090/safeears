@@ -12,19 +12,22 @@ import {
 } from "react-router-dom";
 import {Header,Footer} from './components';
 
+
 const Home = lazy(() => import("./pages/home"));
 
 
 
 const Layout = () => {
+  const location = useLocation();
+  const hideHeaderFooter = location.pathname === '*';
   return (
     <>
       <ScrollToTop />
       <ToastContainer />
       <div className="2xl:max-w-[1800px] mx-auto min-h-screen flex justify-between flex-col">
-        <Header/>
+      {!hideHeaderFooter  &&<Header/>}
         <Outlet />
-        <Footer/>
+        {!hideHeaderFooter  &&<Footer/>}
       </div>
     </>
   );
@@ -39,7 +42,7 @@ const router = createBrowserRouter([
         path: "*",
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <div className='h-screen w-full overflow-hidden grid place-items-center capitalize animate-pulse'>page not found</div>
+            <div className='h-[60vh] w-full overflow-hidden grid place-items-center capitalize animate-pulse'>page not found</div>
           </Suspense>
         ),
       },
