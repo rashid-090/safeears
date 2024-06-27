@@ -1,5 +1,6 @@
 import React from 'react';
 import {earandface} from '../assets'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -8,7 +9,7 @@ const HomePage = () => {
         {/*  */}
         <div className='flex flex-col gap-8 justify-center'>
           <h1 className='font-riche text-5xl md:text-3xl xl:text-6xl'>Enhance your<br className=''/>Ear safety</h1>
-          <button className='font-riche bg-main text-black hover:text-white duration-300 text-2xl xl:text-3xl w-fit px-8 py-2 rounded-full'>shop now</button>
+          <Link to={'/shop'} className='font-riche bg-main text-black hover:text-white duration-300 text-2xl xl:text-3xl w-fit px-8 py-2 rounded-full'>shop now</Link>
           <div className='text-lg flex gap-3'>
             <a className='hover:underline' href="#">TRACK ORDER</a>
             <span>•</span>
