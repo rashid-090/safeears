@@ -14,7 +14,7 @@ const Header = () => {
   const currentPathname = location.pathname;
   return (
     <nav className='w-11/12 lg:w-10/12 mx-auto flex items-center justify-between bg'>
-        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 object-cover' src={logo} alt="safeears" /></Link>
+        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 object-fill' src={logo} alt="safeears" /></Link>
         <ul className='hidden lg:flex items-center gap-5'>
           {menuItems?.map((menu,i)=>(
             <>
@@ -26,6 +26,8 @@ const Header = () => {
             <Link className='text-lg'>Account</Link>
             <Link className='text-lg pl-3'>cart</Link>
         </div>
+        {/*  */}
+        
     </nav>
   )
 }

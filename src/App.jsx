@@ -14,6 +14,9 @@ import {Header,Footer} from './components';
 
 
 const Home = lazy(() => import("./pages/home"));
+const About = lazy(() => import("./pages/about-us"));
+const Shop = lazy(() => import("./pages/shop"));
+const Testimonial = lazy(() => import("./pages/testimonials"));
 
 
 
@@ -51,6 +54,30 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
             <Home/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/about-us",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <About/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Shop/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/testimonials",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Testimonial/>
           </Suspense>
         ),
       },
