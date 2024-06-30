@@ -16,7 +16,7 @@ const menuItems=[
 const Header = () => {
   const location = useLocation();
   const currentPathname = location.pathname;
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
 
   const handleClickOutside = (event) => {
