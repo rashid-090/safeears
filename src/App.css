@@ -83,4 +83,10 @@ background:#4b4b4b;
 cursor: pointer;
 }
 
-
+.nav-bg{
+/* From https://css.glass */
+background: #ffffff6d;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(11.9px);
+-webkit-backdrop-filter: blur(11.9px);
+}

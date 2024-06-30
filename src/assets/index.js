@@ -2,6 +2,7 @@ import logo from './logos/safe-ear-logo.svg';
 import earaids from './images/earaids.webp';
 import earface from './images/earface.webp';
 import earandface from './images/newear&face.webp';
+import usrimage from './images/usr.jpg';
 
 import ear1 from './images/er1.webp';
 import ear2 from './images/er2.webp';
@@ -15,5 +16,6 @@ export{
     earandface,
     ear1,
     ear2,
-    ear3
+    ear3,
+    usrimage
 }
