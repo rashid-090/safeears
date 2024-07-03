@@ -16,10 +16,10 @@ import {Header,Footer} from './components';
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about-us"));
 const Shop = lazy(() => import("./pages/shop"));
-const ShopDetails = lazy(() => import("./pages/shop-inner"));
 const Testimonial = lazy(() => import("./pages/testimonials"));
 const Terms = lazy(() => import("./pages/termsandconditions"));
 const PrivacyPage = lazy(() => import("./pages/privacy"));
+const OurVideos = lazy(() => import("./pages/video"));
 
 
 
@@ -77,14 +77,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/shop/:name",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <ShopDetails/>
-          </Suspense>
-        ),
-      },
-      {
         path: "/testimonials",
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
@@ -106,6 +98,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
             <PrivacyPage/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/our-videos",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <OurVideos/>
           </Suspense>
         ),
       },

@@ -11,9 +11,9 @@ const HomePage = () => {
           <h1 className='font-riche text-5xl md:text-3xl xl:text-6xl'>Enhance your<br className=''/>Ear safety</h1>
           <Link to={'/shop'} className='font-riche bg-main text-black hover:text-white duration-300 text-2xl xl:text-3xl w-fit px-8 py-2 rounded-full'>shop now</Link>
           <div className='text-lg flex gap-3'>
-            <a className='hover:underline' href="#">TRACK ORDER</a>
+            <Link  className='hover:underline' to={'/'}>TRACK ORDER</Link>
             <span>•</span>
-            <a className='hover:underline' href="#">VIDEOS</a>
+            <Link className='hover:underline' to={'/our-videos'}>VIDEOS</Link>
           </div>
         </div>
         {/*  */}

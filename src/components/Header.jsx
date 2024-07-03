@@ -5,6 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { AnimatePresence, motion } from 'framer-motion';
 import { MdClose } from 'react-icons/md';
+import CartModal from './CartModal';
 
 const menuItems=[
   {title:`home`,url:`/`},
@@ -18,6 +19,12 @@ const Header = () => {
   const currentPathname = location.pathname;
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCartModal = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -68,7 +75,7 @@ const Header = () => {
 
   return (
     <nav className='w-11/12 lg:w-10/12 mx-auto flex items-center justify-between bg'>
-        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 object-fill' src={logo} alt="safeears" /></Link>
+        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 2xl:h-48 2xl:w-48 object-fill' src={logo} alt="safeears" /></Link>
         {/* large screen menu */}
         <ul className='hidden lg:flex items-center gap-5'>
           {menuItems?.map((menu,i)=>(
@@ -128,13 +135,13 @@ const Header = () => {
        <div className='flex gap-8 items-center'>
             <div className='relative'>
             <span className='absolute -top-3 -right-3 bg-red-500 text-white w-5 h-5 text-xs rounded-full grid place-items-center'>2</span>
-            <Link className='text-2xl hover:text-main'><FaCartShopping/></Link>
+            <Link className='text-2xl hover:text-main' onClick={toggleCartModal}><FaCartShopping/></Link>
           </div>
           <HiOutlineMenuAlt1 onClick={toggleMenu} className='text-3xl block lg:hidden '/>
        </div>
 
         {/*  */}
-        
+        <CartModal isOpen={isCartOpen} onClose={toggleCartModal} />
     </nav>
   )
 }
