@@ -7,41 +7,49 @@ const Products = [
     name: `SE-Black RIGHT`,
     price: `1299`,
     prodimage: ear1,
+    prodimage2: ear2,
   },
   {
     name: `SE-Grey RIGHT`,
     price: `1299`,
     prodimage: ear3,
+    prodimage2: ear1,
   },
   {
     name: `SE-Beige RIGHT`,
     price: `1299`,
     prodimage: ear2,
+      prodimage2: ear1, 
   },
   {
     name: `SE-white RIGHT`,
     price: `1299`,
     prodimage: ear2,
+      prodimage2: ear1,
   },
   {
     name: `SE-Black RIGHT`,
     price: `1299`,
     prodimage: ear1,
+      prodimage2: ear1,
   },
   {
     name: `SE-Grey RIGHT`,
     price: `1299`,
     prodimage: ear3,
+      prodimage2: ear1,
   },
   {
     name: `SE-Beige RIGHT`,
     price: `1299`,
     prodimage: ear2,
+      prodimage2: ear1,
   },
   {
     name: `SE-white RIGHT`,
     price: `1299`,
     prodimage: ear2,
+      prodimage2: ear1,
   },
 ];
 

@@ -90,3 +90,31 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(11.9px);
 -webkit-backdrop-filter: blur(11.9px);
 }
+
+
+
+
+.cart-scroll::-webkit-scrollbar{
+  width: 5px;
+  background: rgb(177, 177, 177);
+  }
+  
+  .cart-scroll::-webkit-scrollbar-thumb{
+    background: rgb(93, 91, 91);
+  
+  }
+  
+  .cart-scroll::-webkit-scrollbar-thumb:hover{
+    background: rgb(132, 130, 130);
+  cursor: pointer;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid rgb(248, 177, 51);
+    padding: 8px;
+    text-align: left;
+}

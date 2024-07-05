@@ -20,6 +20,7 @@ const Testimonial = lazy(() => import("./pages/testimonials"));
 const Terms = lazy(() => import("./pages/termsandconditions"));
 const PrivacyPage = lazy(() => import("./pages/privacy"));
 const OurVideos = lazy(() => import("./pages/video"));
+const Checkout = lazy(() => import("./pages/checkout"));
 
 
 
@@ -30,7 +31,7 @@ const Layout = () => {
     <>
       <ScrollToTop />
       <ToastContainer />
-      <div className="2xl:max-w-[1800px] mx-auto min-h-screen flex justify-between flex-col">
+      <div className="2xl:max-w-[2200px] mx-auto min-h-screen flex justify-between flex-col">
       {!hideHeaderFooter  &&<Header/>}
         <Outlet />
         {!hideHeaderFooter  &&<Footer/>}
@@ -106,6 +107,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
             <OurVideos/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/checkout",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Checkout/>
           </Suspense>
         ),
       },

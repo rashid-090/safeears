@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -14,13 +14,13 @@ const Footer = () => {
           </p>
 
             <div className="flex gap-3 text-2xl">
-              <a href="#">
+              <a href="https://www.facebook.com/profile.php?id=61560658988420" target="_blank">
                 <FaFacebook />
               </a>
-              <a href="#">
-                <FaTwitter />
+              <a href="https://www.youtube.com/@safeears" target="_blank">
+                <FaYoutube />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/safe.ears.india/" target="_blank">
                 <FaInstagram />
               </a>
             </div>
