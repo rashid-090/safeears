@@ -67,7 +67,9 @@ html {
 img {
   max-width: 100%;
 }
-
+input{
+  background-color: transparent;
+}
 ::-webkit-scrollbar{
 width: 12px;
 background: rgb(27, 27, 27);
@@ -114,7 +116,7 @@ table {
     border-collapse: collapse;
 }
 th, td {
-    border: 2px solid rgb(248, 177, 51);
+    border: 2px solid #d1d5db;
     padding: 8px;
     text-align: left;
 }

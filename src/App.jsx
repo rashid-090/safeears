@@ -13,6 +13,8 @@ import {
 import {Header,Footer} from './components';
 
 
+// main Routes
+
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about-us"));
 const Shop = lazy(() => import("./pages/shop"));
@@ -21,12 +23,20 @@ const Terms = lazy(() => import("./pages/termsandconditions"));
 const PrivacyPage = lazy(() => import("./pages/privacy"));
 const OurVideos = lazy(() => import("./pages/video"));
 const Checkout = lazy(() => import("./pages/checkout"));
+const Success = lazy(() => import("./pages/Success"));
 
+// Admin Routes
+const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
+const AdminOrders = lazy(() => import("./pages/admin/orders"));
+const AdminProducts = lazy(() => import("./pages/admin/products"));
 
 
 const Layout = () => {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === '*';
+  const hideHeaderFooterPaths = ['/order-success','/admin', '/dashboard','/dashboard/products','/dashboard/orders'];
+  const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname);
+
   return (
     <>
       <ScrollToTop />
@@ -115,6 +125,47 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
             <Checkout/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/order-success",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Success/>
+          </Suspense>
+        ),
+      },
+      // Admin routes
+      {
+        path: "/admin",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <AdminLogin/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Dashboard/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/dashboard/products",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <AdminProducts/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/dashboard/orders",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <AdminOrders/>
           </Suspense>
         ),
       },

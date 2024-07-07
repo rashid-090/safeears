@@ -1,6 +1,8 @@
 import React from "react";
+import {  useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const navigate = useNavigate();
   return (
     <section className="w-11/12 xl:w-10/12 mx-auto py-10 h-full">
       <div className="grid grid-cols-1 md:grid-cols-3 text-sm gap-10">
@@ -14,7 +16,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="text"
                 placeholder="Name"
               />
@@ -25,7 +27,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="number"
                 placeholder="Phone Number"
               />
@@ -36,7 +38,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="number"
                 placeholder="Whatsapp Number"
               />
@@ -47,7 +49,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="email"
                 placeholder="Email"
               />
@@ -58,7 +60,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <textarea
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="text"
                 rows={4}
                 placeholder="Phone Number"
@@ -70,7 +72,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="text"
                 placeholder="City"
               />
@@ -81,7 +83,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="text"
                 placeholder="State"
               />
@@ -92,7 +94,7 @@ const Checkout = () => {
                 <span className="text-red-400 mt-2">*</span>
               </label>
               <input
-                className="w-full p-2.5 bg-transparent outline-none border-2 border-main"
+                className="w-full p-2.5 bg-transparent outline-none border-2 border-gray-200"
                 type="number"
                 placeholder="Pin code"
               />
@@ -104,7 +106,7 @@ const Checkout = () => {
             <h6 className="text-2xl font-semibold pb-5">Your order</h6>
             <div className="flex flex-col gap-5">
                 <table className="">
-                    <tr>
+                    <tr className="text-main">
                         <th>Product</th>
                         <th>Subtotal</th>
                     </tr>
@@ -120,12 +122,12 @@ const Checkout = () => {
                         <td>SE-Black RIGHT <span className="font-semibold">x 1</span></td>
                         <td>1299 ₹</td>
                     </tr>          
-                    <tr className="font-bold">
+                    <tr className="font-bold text-main text-xl">
                         <td>Total</td>
                         <td>3999 ₹</td>
                     </tr>          
                 </table>
-                <button className="bg-main text-white py-3 rounded-md capitalize font-semibold text-base">pay now</button>
+                <button onClick={() => navigate('/order-success')} className="bg-main hover:bg-yellow-600 duration-200 text-white py-3 rounded-md capitalize font-semibold text-base">pay now</button>
             </div>
         </div>
       </div>
