@@ -120,3 +120,12 @@ th, td {
     padding: 8px;
     text-align: left;
 }
+
+
+.swiper-pagination-bullet {
+  margin-bottom: -15px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #f8b133 !important;
+  
+}

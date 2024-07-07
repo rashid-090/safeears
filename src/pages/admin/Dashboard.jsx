@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+    const navigate = useNavigate();
   return (
     <div>
         <Navbar/>
@@ -11,12 +13,12 @@ const Dashboard = () => {
                 <div className='bg-main rounded-sm p-10 flex flex-col gap-3'>
                     <h1 className='text-2xl xl:text-4xl'>Products</h1>
                     <p>10 product</p>
-                    <button className='bg-white hover:bg-gray-200 duration-200 text-sm uppercase tracking-wider text-black w-fit h-10 px-10 rounded-md'>View</button>
+                    <button onClick={() => navigate('/dashboard/products')} className='bg-white hover:bg-gray-200 duration-200 text-sm uppercase tracking-wider text-black w-fit h-10 px-10 rounded-md'>View</button>
                 </div>
                 <div className='bg-main rounded-sm p-10 flex flex-col gap-3'>
                     <h1 className='text-2xl xl:text-4xl'>Orders</h1>
                     <p>100 orders</p>
-                    <button className='bg-white hover:bg-gray-200 duration-200 text-sm uppercase tracking-wider text-black w-fit h-10 px-10 rounded-md'>View</button>
+                    <button onClick={() => navigate('/dashboard/orders')} className='bg-white hover:bg-gray-200 duration-200 text-sm uppercase tracking-wider text-black w-fit h-10 px-10 rounded-md'>View</button>
                 </div>
             </div>
         </div>

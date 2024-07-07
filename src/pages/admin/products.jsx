@@ -67,7 +67,7 @@ const Products = () => {
                 <h3 className='text-4xl font-semibold uppercase text-main'>All Products</h3>
                 {ProdList?.map((prod,i)=>(
                   <>
-                    <div className='flex justify-between items-center gap-5 border-b border-main pb-5 last:border-none' key={i}>
+                    <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-5 border-b border-main pb-5 last:border-none' key={i}>
                       <h3>{prod.name}</h3>
                       <img className='bg-white h-20' src={prod.prodimage} alt="" />
                       <div className='flex gap-5 text-sm items-center text-black'>

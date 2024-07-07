@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay,Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const ProductDetailModal = ({ product, isOpen, onClose }) => {
   const [quantity, setQuantity] = useState(1);
@@ -37,18 +42,30 @@ const ProductDetailModal = ({ product, isOpen, onClose }) => {
             onClick={handleBackgroundClick}
           ></div>
           <div className="bg-white p-5 xl:p-10 rounded-3xl text-black absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[85%] xl:w-fit">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:gap-x-20">
-              <div className="flex flex-col items-center md:items-start justify-center">
-                <img
-                  className="h-80 w-60 xl:h-[400px] xl:w-[300px] object-cover"
-                  src={
-                    selectedColor === "black"
-                      ? product.prodimage
-                      : product.prodimage2
-                  }
-                  alt=""
-                />
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 xl:gap-x-20">
+             
+        
+                {/* ====== */}
+                  <div>
+                  <Swiper
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      autoplay={true}
+                      loop={true}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      modules={[Autoplay,Pagination]}>
+                          <SwiperSlide>
+                             <img src={product.prodimage} className="h-72 w-56 xl:h-[400px] xl:w-[300px]" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                             <img src={product.prodimage2} className="h-72 w-56 xl:h-[400px] xl:w-[300px]" />
+                          </SwiperSlide>
+                      </Swiper>
+                  </div>
+                {/* ====== */}
+             
               <div className="flex flex-col gap-4 justify-center">
                 <h1 className="text-2xl font-semibold">{product.name}</h1>
                 <div className="flex items-center space-x-3 text-black">
@@ -70,11 +87,9 @@ const ProductDetailModal = ({ product, isOpen, onClose }) => {
                   <h3 className="text-sm font-medium">Choose Color</h3>
                   <select
                     className="outline-none capitalize border border-gray-500"
-                    value={selectedColor}
-                    onChange={handleColorChange}
                   >
-                    <option value="white">white</option>
                     <option value="black">black</option>
+                    <option value="white">white</option>
                   </select>
                 </div>
                 <h4 className="text-base font-semibold">
