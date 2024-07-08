@@ -26,7 +26,7 @@ const Checkout = lazy(() => import("./pages/checkout"));
 const Success = lazy(() => import("./pages/Success"));
 
 // Admin Routes
-const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
 const AdminOrders = lazy(() => import("./pages/admin/orders"));
 const AdminProducts = lazy(() => import("./pages/admin/products"));
