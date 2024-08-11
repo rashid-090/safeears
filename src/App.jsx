@@ -17,11 +17,11 @@ import {Header,Footer} from './components';
 
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about-us"));
+const Contact = lazy(() => import("./pages/contact-us"));
+const OurVideos = lazy(() => import("./pages/video"));
 const Shop = lazy(() => import("./pages/shop"));
-const Testimonial = lazy(() => import("./pages/testimonials"));
 const Terms = lazy(() => import("./pages/termsandconditions"));
 const PrivacyPage = lazy(() => import("./pages/privacy"));
-const OurVideos = lazy(() => import("./pages/video"));
 const Checkout = lazy(() => import("./pages/checkout"));
 const Success = lazy(() => import("./pages/Success"));
 
@@ -80,39 +80,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/shop",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Shop/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/testimonials",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Testimonial/>
-          </Suspense>
-        ),
-      },
-      
-      {
-        path: "/terms-and-conditions",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Terms/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/privacy-policy",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <PrivacyPage/>
-          </Suspense>
-        ),
-      },
-      {
         path: "/our-videos",
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
@@ -121,55 +88,15 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/checkout",
+        path: "/contact-us",
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Checkout/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/order-success",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Success/>
-          </Suspense>
-        ),
-      },
-      // Admin routes
-      {
-        path: "/admin",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <AdminLogin/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/dashboard",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <Dashboard/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/dashboard/products",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <AdminProducts/>
-          </Suspense>
-        ),
-      },
-      {
-        path: "/dashboard/orders",
-        element: (
-          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
-            <AdminOrders/>
+            <Contact/>
           </Suspense>
         ),
       },
       
+     
       
     ],
   },

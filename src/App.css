@@ -56,7 +56,11 @@
 
 body{
   color: white;
-  background: #020202;
+  /* background: #020202; */
+  background-image: url('./assets/earwebbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   font-family: "poppins-regular", sans-serif
 }
 

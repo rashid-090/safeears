@@ -10,8 +10,8 @@ import CartModal from './CartModal';
 const menuItems=[
   {title:`home`,url:`/`},
   {title:`about us`,url:`/about-us`},
-  {title:`shop`,url:`/shop`},
-  {title:`testimonials`,url:`/testimonials`},
+  {title:`videos`,url:`/our-videos`},
+  {title:`contact`,url:`#`},
 ]
 
 const Header = () => {
@@ -74,13 +74,13 @@ const Header = () => {
   };
 
   return (
-    <nav className='w-11/12 lg:w-10/12 mx-auto flex items-center justify-between bg'>
-        <Link to={'/'}><img className='w-20 h-20 -ml-2 xl:w-40 xl:h-40 2xl:h-48 2xl:w-48 object-fill' src={logo} alt="safeears" /></Link>
+    <nav className='w-11/12 lg:w-10/12 py-5 xl:py-16 mx-auto flex items-center justify-between bg'>
+        <Link to={'/'}><img className='h-28 w-32 xl:w-48 xl:h-44 object-cover xl:-mb-32' src={logo} alt="safeears" /></Link>
         {/* large screen menu */}
         <ul className='hidden lg:flex items-center gap-5'>
           {menuItems?.map((menu,i)=>(
             <>
-              <li className={`text-xl uppercase text-white ${currentPathname === menu.url ? 'border-b border-main' : 'border-b border-transparent' }`} key={i}><Link to={menu.url}>{menu.title}</Link></li>{i < menuItems.length - 1 && <span className="text-gray-300">•</span>}
+              <li className={`text-xl font-medium uppercase text-white ${currentPathname === menu.url ? 'border-b border-white' : 'border-b border-transparent' }`} key={i}><Link to={menu.url}>{menu.title}</Link></li>{i < menuItems.length - 1 && <span className="text-gray-300">•</span>}
             </>
           ))}
         </ul>
@@ -133,11 +133,11 @@ const Header = () => {
         </AnimatePresence>
 
        <div className='flex gap-8 items-center'>
-            <div className='relative'>
+            {/* <div className='relative'>
             <span className='absolute -top-3 -right-3 bg-red-500 text-white w-5 h-5 text-xs rounded-full grid place-items-center'>2</span>
             <Link className='text-2xl hover:text-main' onClick={toggleCartModal}><FaCartShopping/></Link>
-          </div>
-          <HiOutlineMenuAlt1 onClick={toggleMenu} className='text-3xl block lg:hidden '/>
+          </div> */}
+          <HiOutlineMenuAlt1 onClick={toggleMenu} className='text-4xl block lg:hidden '/>
        </div>
 
         {/*  */}
