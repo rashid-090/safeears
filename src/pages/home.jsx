@@ -19,10 +19,10 @@ const HomePage = () => {
         </div>
         <div className='xl:basis-4/6 flex gap-5 xl:gap-10 justify-end'>
             <div className='h-full flex items-center'>
-              <img className='h-[200px] object-cover xl:h-[500px]' src={earaids} alt="" />
+              <img className='h-[180px] sm:h-[200px] object-cover xl:h-[500px]' src={earaids} alt="" />
             </div>
             <div className='flex items-end'>
-              <img className='h-[250px] object-cover md:h-[300px] xl:h-[600px]' src={earandface} alt="" />
+              <img className='h-[200px] sm:h-[250px] object-cover md:h-[300px] xl:h-[600px]' src={earandface} alt="" />
             </div>
         </div>
     </section>
