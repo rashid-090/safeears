@@ -13,9 +13,9 @@ const HomePage = () => {
             <div className='flex flex-col gap-3 text-center  border-2 rounded-[2.5rem] w-full md:w-fit p-5'>
             <h1 className='-mt-12 font-semibold'>Unit of GRAND VF PVT. LTD.</h1>
                 <h3 className='text-3xl uppercase font-semibold'>shop now</h3>
-                <a href="#" target='_blank'><img className='object-cover h-24 md:h-20 w-full md:w-fit px-10 bg-white hover:bg-gray-200 hover:shadow-xl duration-200 rounded-2xl' src={safewht} alt="" /></a>
-                <a href="#" target='_blank'><img className='object-cover h-24 md:h-20 w-full md:w-fit px-10 bg-white hover:bg-gray-200 hover:shadow-xl duration-200 rounded-2xl' src={safeamz} alt="" /></a>
-                <a href="#" target='_blank'><img className='object-cover h-24 md:h-20 w-full md:w-fit px-10 bg-white hover:bg-gray-200 hover:shadow-xl duration-200 rounded-2xl' src={safeflp} alt="" /></a>
+                <Link to={'/under-construction'}><img className='h-20 object-contain rounded-2xl py-1 bg-white w-full' src={safewht} alt="" /></Link>
+                <Link to={'/under-construction'}><img className='h-20 object-contain rounded-2xl py-1 bg-white w-full' src={safeamz} alt="" /></Link>
+                <Link to={'/under-construction'}><img className='h-20 object-contain rounded-2xl py-1 bg-white w-full' src={safeflp} alt="" /></Link>
             </div>
         </div>
         <div className='xl:basis-4/6 flex gap-5 xl:gap-10 justify-end'>

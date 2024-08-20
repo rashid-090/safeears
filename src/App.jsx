@@ -23,7 +23,8 @@ const Shop = lazy(() => import("./pages/shop"));
 const Terms = lazy(() => import("./pages/termsandconditions"));
 const PrivacyPage = lazy(() => import("./pages/privacy"));
 const Checkout = lazy(() => import("./pages/checkout"));
-const Success = lazy(() => import("./pages/Success"));
+// const Success = lazy(() => import("./pages/Success"));
+const Construct = lazy(() => import("./pages/constr"));
 
 // Admin Routes
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
@@ -68,6 +69,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
             <Home/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/under-construction",
+        element: (
+          <Suspense fallback={<p className='h-screen grid place-items-center'>Loading....</p>}>
+            <Construct/>
           </Suspense>
         ),
       },
