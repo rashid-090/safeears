@@ -11,7 +11,7 @@ const menuItems=[
   {title:`home`,url:`/`},
   {title:`about us`,url:`/about-us`},
   {title:`videos`,url:`/our-videos`},
-  {title:`contact`,url:`#`},
+  {title:`contact`,url:`/contact-us`},
 ]
 
 const Header = () => {

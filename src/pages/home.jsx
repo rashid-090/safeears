@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {earandface,earaids,safewht,safeamz,safeflp} from '../assets'
 import { Link } from 'react-router-dom';
 
+
 const HomePage = () => {
 
 

@@ -7,7 +7,7 @@ const Success = () => {
     const navigate = useNavigate();
   return (
     <div className='h-screen w-full flex flex-col justify-center text-center items-center'>
-      <h4 className='-mt-40 text-3xl xl:text-5xl capitalize '>Under construction</h4>
+      <h4 className='-mt-40 text-3xl xl:text-5xl capitalize font-black text-main'>Under construction</h4>
       <a target='_blank' href='https://wa.me/+919207166699' className='mt-5 text-2xl capitalize animate-bounce  hover:underline'>contact us</a>
  </div>
   )
