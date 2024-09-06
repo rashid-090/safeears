@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="border-t-4 border-main py-5 flex items-center">
       <div className="w-11/12 lg:w-10/12 mx-auto">
         <div className="text-base flex flex-col items-center lg:items-start gap-y-5 lg:flex-row justify-between">
-          <div className="flex flex-col lg:flex-row items-center gap-2">
+          <div className="flex flex-col xl:flex-row items-center gap-2">
             <FaWhatsapp className="text-2xl"/>
             <p>Customer Support :</p>
             <span className="flex items-center divide-x-2">
@@ -26,7 +26,7 @@ const Footer = () => {
               <a className="hover:scale-90 duration-200" href="http://www.youtube.com/@safeears" target="_blank"><FaYoutube/></a>
           </div>
           
-          <div className="flex  text-[10px] md:text-base items-center gap-5">
+          <div className="flex flex-col xl:flex-row text-[10px] md:text-base items-center gap-5">
             <div className="flex gap-2 items-center">
               <img className="h-8 w-8 object-cover" src={uklgo} alt="" />
               <p>Designed in United Kingdom</p>
@@ -36,6 +36,9 @@ const Footer = () => {
               <p>Made in India</p>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center">
+             <a href="http://Webboxdevelopers.com" target="_blank" className="capitalize mt-5 hover:underline text-xs xl:text-sm">designed by webboxdevelopers</a>
         </div>
       </div>
     </footer>

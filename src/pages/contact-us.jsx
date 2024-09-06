@@ -20,7 +20,7 @@ const ContactUs = () => {
             Kerala, India</p>
         </div>
         <div className='flex items-start gap-5'>
-          <FiPhone className='text-2xl'/>
+          <FiPhone className='text-3xl'/>
           <div className='flex flex-col font-medium text-xl'>
             <a className='hover:underline' href="tel:9207166699">9207 166699</a>
             <a className='hover:underline' href="tel:9207066699">9207 066699</a>

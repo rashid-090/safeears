@@ -10,7 +10,7 @@ import {
   useLocation,
   // useNavigate,
 } from "react-router-dom";
-import {Header,Footer} from './components';
+import {Header,Footer,Hubspot} from './components';
 
 
 // main Routes
@@ -44,6 +44,7 @@ const Layout = () => {
       <ToastContainer />
       <div className="2xl:max-w-[2200px] mx-auto min-h-screen flex justify-between flex-col">
       {!hideHeaderFooter  &&<Header/>}
+      <Hubspot/>
         <Outlet />
         {!hideHeaderFooter  &&<Footer/>}
       </div>
