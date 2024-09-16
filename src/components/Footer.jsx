@@ -5,10 +5,12 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { Wabis } from "../components";
 
 const Footer = () => {
   return (
     <footer className="border-t-4 border-main py-5 flex items-center">
+      <Wabis/>
       <div className="w-11/12 lg:w-10/12 mx-auto">
         <div className="text-base flex flex-col items-center lg:items-start gap-y-5 lg:flex-row justify-between">
           <div className="flex flex-col xl:flex-row items-center gap-2">
